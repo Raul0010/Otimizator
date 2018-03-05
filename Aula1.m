@@ -1,9 +1,9 @@
-numpontos = 200; %numero de pontos que formam a distância entre paredes
+numpontos =50; %numero de pontos que formam a distância entre paredes
 dx = 1/numpontos; %intervalo entre os pontos
 pontos = [1:numpontos]; %criei não sei por quê
-iteracoes = 2; %numero de iteracoes de m
+iteracoes = 20; %numero de iteracoes de m
 i = 1; %valor inicial da matriz
-t=10^(-5); %tempo
+t=0; %tempo
 M = iteracoes; %iteracoes de m
 
 C = zeros(numpontos, numpontos); %inicializa matriz C com zeros nxn
@@ -18,8 +18,12 @@ end
   for i=1:numpontos
     
     for j=1:numpontos
-      for m=1:M
-        C(i, j) = C(i, j) + (exp(-((m*pi)^2)*t)*dx*cos(m*pi*j*dx)*cos(m*pi*i*dx))/(2*1/m);
+      for m=0:M
+        if(m==0)
+          C(i, j) = C(i, j) + (exp(-((m*pi)^2)*t)*dx*cos(m*pi*j*dx)*cos(m*pi*i*dx))/(2*1);
+        else
+          C(i, j) = C(i, j) + (exp(-((m*pi)^2)*t)*dx*cos(m*pi*j*dx)*cos(m*pi*i*dx))/(2*1/2);
+        endif  
       end  
     end
   end
@@ -30,5 +34,4 @@ end
     end
   end
 T = C * F; %Multiplica matriz C pela F para encontrar temperatura final
-T = T+0.5; %Soma ponto médio da temperatura inicial ( matriz C só da uma porcentagem)
 plot(pontos*dx, T, pontos*dx, F); %exibe o gráfico
