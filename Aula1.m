@@ -1,9 +1,9 @@
-numpontos =50; %numero de pontos que formam a distância entre paredes
+numpontos =26; %numero de pontos que formam a distância entre paredes
 dx = 1/numpontos; %intervalo entre os pontos
 pontos = [1:numpontos]; %criei não sei por quê
-iteracoes = 20; %numero de iteracoes de m
+iteracoes = 25; %numero de iteracoes de m
 i = 1; %valor inicial da matriz
-t=0; %tempo
+t=5*10^(-4); %tempo
 M = iteracoes; %iteracoes de m
 
 C = zeros(numpontos, numpontos); %inicializa matriz C com zeros nxn
