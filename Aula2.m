@@ -1,4 +1,4 @@
-source("trocaLinha.m");
+
 n = 4; %numero de pontos
 G1 = [1 2 2 3 3 4 4 1 1 3]; %conjunto de ligacoes 1o grafo 
 G2 = [1 2 2 3 3 4 4 1 4 2]; %conjunto de ligacoes 2o grafo
@@ -32,6 +32,8 @@ while (i<(length(G2)))
 endwhile
 %Printando as duas matrizes
 M1
-M2
-M1 = trocaLinha(M1,1,1)
+M1 = trocaCol(M1,1,2)
+%M2
+
+
 
