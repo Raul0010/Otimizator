@@ -32,8 +32,25 @@ while (i<(length(G2)))
 endwhile
 %Printando as duas matrizes
 M1
-M1 = trocaCol(M1,1,2)
-%M2
+M2
+i=1;
+j=1;
+printf("-----------\n")
+while (i<n)
+ while (j<n)
+  M2 = trocaLinha(M2,j,j+1);
+  M2
+  j++;
+ endwhile
+
+ printf("-----troca de coluna-------\n")
+ j=1;
+ M2 = trocaCol(M2,i,i+1);
+ M2
+ i++;
+endwhile
+
+ 
 
 
 
