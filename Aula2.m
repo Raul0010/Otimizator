@@ -33,8 +33,10 @@ endwhile
 %Printando as duas matrizes
 M1
 M2
+rref(M1)
+rref(M2)
 r = isequal(rref(M1),rref(M2))
-if (r=1)
+if (r==1)
   printf("grafos isomorficos\n")
 else
   printf("grafos não-isomórficos\n")
