@@ -1,7 +1,7 @@
 
 n = 4; %numero de pontos
-G1 = [1 2 2 3 3 4 4 1 1 3]; %conjunto de ligacoes 1o grafo 
-G2 = [1 2 2 3 3 4 4 1 4 2]; %conjunto de ligacoes 2o grafo
+G1 = [1 2 2 3 3 4 1]%conjunto de ligacoes 1o grafo 
+G2 = [2 4 4 1 1 3 2]%conjunto de ligacoes 2o grafo
 %Declarando o tamanho das matrizes de adjacencia
 M1= eye(n); 
 M1 = M1 .* 0;
